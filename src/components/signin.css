@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+
+.signin-header {
+  color: #474747;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 16px;
+}
+
+.signin-container label {
+  color: #382d2d;
+  margin: 5px auto;
+  font-size: 20px;
+  margin-top: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.signin-container {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background: #f35c23;
+  text-align: center;
+  box-shadow: 5px 10px 5px #000000bf;
+}
+.signin-container input[type="text"],
+.signin-container input[type="password"] {
+  background: none;
+  border: 0px;
+  display: block;
+  margin: 10px auto 2px;
+  text-align: center;
+  border: 2px solid #474747;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #f8f8ff;
+  border-radius: 24px;
+  transition: 0.25s;
+  font-family: "Montserrat", sans-serif;
+}
+
+.signin-container input[type="text"]:hover,
+.signin-container input[type="password"]:hover {
+  width: 280px;
+  border-color: white;
+  border-radius: 30px;
+}
+
+.signin-btn {
+  background: #474747;
+  border: 0px;
+  display: block;
+  margin: 36px auto 16px;
+  text-align: center;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.signin-btn:hover {
+  background: white;
+  color: #474747;
+  border: none;
+}
+.signin-container .form-item {
+  margin-bottom: 16px;
+}
+.reg-query p {
+  display: block;
+  float: left;
+  margin: 4px 20px;
+  color: black;
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+}
+.signupDirect {
+  background: #474747;
+  border: 0px;
+  display: block;
+  float: left;
+  margin: 0px 14px;
+  text-align: center;
+  padding: 7px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+.signupDirect:hover {
+  background: white;
+  color: #474747;
+  border: none;
+}
