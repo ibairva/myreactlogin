@@ -32,7 +32,7 @@ export default class Signin extends React.Component {
     const filtered = list2.filter((n) => n.username == this.state.username);
     console.log(filtered);
 
-    if (filtered.length == 0) {
+    if (this.state.username && filtered.length == 0) {
       alert("You are not registered. Please Sign Up");
     } else {
       if (!this.state.username) {
