@@ -80,7 +80,7 @@ export default class Signin extends React.Component {
                   value={this.state.username}
                   onChange={this.handleChange}
                 />
-                <div style={{ fontSize: 12, color: "white" }}>
+                <div style={{ fontSize: 12, color: "#ea0101" }}>
                   {this.state.usernameError}
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default class Signin extends React.Component {
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
-                <div style={{ fontSize: 12, color: "white" }}>
+                <div style={{ fontSize: 12, color: "#ea0101" }}>
                   {this.state.passwordError}
                 </div>
               </div>

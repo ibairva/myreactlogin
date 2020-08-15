@@ -36,52 +36,62 @@ export default class Signup extends React.Component {
     let passwordError = "";
     let confirmpwError = "";
 
-    if (!this.state.name) {
-      nameError = "Name cannot be blank";
-    }
+    let list2 = localStorage.getItem("userData");
+    list2 = JSON.parse(list2);
 
-    if (!this.state.email) {
-      emailError = "Email cannot be blank";
-    }
+    const filtered = list2.filter((n) => n.username == this.state.username);
+    console.log(filtered);
 
-    if (!this.state.email.includes("@")) {
-      emailError = "Invalid email";
-    }
+    if (filtered.length == 1) {
+      alert("This username is already registered");
+    } else {
+      if (!this.state.name) {
+        nameError = "Name cannot be blank";
+      }
 
-    if (!this.state.username) {
-      usernameError = "Username cannot be blank";
-    }
+      if (!this.state.email) {
+        emailError = "Email cannot be blank";
+      }
 
-    if (!this.state.password) {
-      passwordError = "Password cannot be blank";
-    }
+      if (!this.state.email.includes("@")) {
+        emailError = "Invalid email";
+      }
 
-    if (this.state.password.length < 6) {
-      passwordError = "Password should be of minimum 6 characters";
-    }
+      if (!this.state.username) {
+        usernameError = "Username cannot be blank";
+      }
 
-    if (this.state.confirmpw !== this.state.password) {
-      confirmpwError = "Password doesn't match";
-    }
+      if (!this.state.password) {
+        passwordError = "Password cannot be blank";
+      }
 
-    if (
-      emailError ||
-      nameError ||
-      usernameError ||
-      passwordError ||
-      confirmpwError
-    ) {
-      this.setState({
-        emailError,
-        nameError,
-        usernameError,
-        passwordError,
-        confirmpwError,
-      });
-      return false;
-    }
+      if (this.state.password.length < 6) {
+        passwordError = "Password should be of minimum 6 characters";
+      }
 
-    return true;
+      if (this.state.confirmpw !== this.state.password) {
+        confirmpwError = "Password doesn't match";
+      }
+
+      if (
+        emailError ||
+        nameError ||
+        usernameError ||
+        passwordError ||
+        confirmpwError
+      ) {
+        this.setState({
+          emailError,
+          nameError,
+          usernameError,
+          passwordError,
+          confirmpwError,
+        });
+        return false;
+      }
+
+      return true;
+    }
   };
 
   handleSubmit = (event) => {
@@ -114,7 +124,7 @@ export default class Signup extends React.Component {
                   value={this.state.name}
                   onChange={this.handleChange}
                 />
-                <div style={{ fontSize: 11, color: "white" }}>
+                <div style={{ fontSize: 11, color: "#ea0101" }}>
                   {this.state.nameError}
                 </div>
               </div>
@@ -128,7 +138,7 @@ export default class Signup extends React.Component {
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
-                <div style={{ fontSize: 11, color: "white" }}>
+                <div style={{ fontSize: 11, color: "#ea0101" }}>
                   {this.state.emailError}
                 </div>
               </div>
@@ -142,7 +152,7 @@ export default class Signup extends React.Component {
                   value={this.state.username}
                   onChange={this.handleChange}
                 />
-                <div style={{ fontSize: 11, color: "white" }}>
+                <div style={{ fontSize: 11, color: "#ea0101" }}>
                   {this.state.usernameError}
                 </div>
               </div>
@@ -156,7 +166,7 @@ export default class Signup extends React.Component {
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
-                <div style={{ fontSize: 11, color: "white" }}>
+                <div style={{ fontSize: 11, color: "#ea0101" }}>
                   {this.state.passwordError}
                 </div>
               </div>
@@ -170,7 +180,7 @@ export default class Signup extends React.Component {
                   value={this.state.confirmpw}
                   onChange={this.handleChange}
                 />
-                <div style={{ fontSize: 11, color: "white" }}>
+                <div style={{ fontSize: 11, color: "#ea0101" }}>
                   {this.state.confirmpwError}
                 </div>
               </div>
@@ -182,7 +192,7 @@ export default class Signup extends React.Component {
             </button>
             <div className="account-query">
               <p>Already have an account?</p>
-              <Link to="/">
+              <Link to="/signin">
                 <button className="signinDirect">Sign In here</button>
               </Link>
             </div>

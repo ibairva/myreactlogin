@@ -7,6 +7,8 @@
 }
 .navbar ul {
   height: 100px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   text-decoration: none;
 }
@@ -18,6 +20,12 @@
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 500;
+}
+.li-signin {
+  float: right;
+}
+.li-signup {
+  float: left;
 }
 .nav-signin {
   width: 50%;
@@ -34,7 +42,7 @@
   background-color: none;
 }
 a {
-  color: #474747;
+  color: #09759e;
 }
 a:hover {
   color: white;
@@ -43,7 +51,52 @@ a:hover {
   width: 200px;
   margin: 2px auto;
   padding: 20px 2px;
-  background: linear-gradient(90deg, #ff5a09, #ec7f37);
+  background-color: #d5d9daab;
   border-radius: 40px;
-  box-shadow: 5px 5px 3px #000000bf;
+  box-shadow: 6px 6px 7px #000000bf;
+}
+@media screen and (max-width: 786px) {
+  .nav-tag {
+    width: 175px;
+    padding: 17px 1.5px;
+  }
+
+  .navbar ul li {
+    padding: 10px;
+  }
+  .nav-signup {
+    padding: 2% 6%;
+  }
+  .nav-signin {
+    padding: 2% 6%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .nav-tag {
+    width: 150px;
+    padding: 14px 1.5px;
+  }
+  .nav-signup {
+    padding: 2% 1%;
+  }
+  .nav-signin {
+    padding: 2% 1%;
+  }
+  a {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .navbar ul li {
+    padding: 7px 3px;
+  }
+  .nav-tag {
+    width: 120px;
+    padding: 10px 0px;
+  }
+  a {
+    font-size: 21px;
+  }
 }

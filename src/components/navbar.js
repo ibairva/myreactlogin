@@ -7,16 +7,16 @@ const Navbar = () => {
     <div className="navbar">
       <ul>
         <div className="nav-signin">
-          <li>
+          <li className="li-signin">
             <div className="nav-tag">
-              <Link to="/" style={{ textDecoration: "none" }}>
+              <Link to="/signin" style={{ textDecoration: "none" }}>
                 Sign In
               </Link>
             </div>
           </li>
         </div>
         <div className="nav-signup">
-          <li>
+          <li className="li-signup">
             <div className="nav-tag">
               <Link to="/signup" style={{ textDecoration: "none" }}>
                 Sign Up
